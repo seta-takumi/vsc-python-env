@@ -1,5 +1,5 @@
 {
-  "name": "Rye",
+  "name": "Python UV",
   "build": {
     "context": "..",
     "dockerfile": "Dockerfile"
@@ -11,15 +11,16 @@
         "charliermarsh.ruff"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/opt/rye/shims/python",
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
         "[python]": {
-            "editor.defaultFormatter": "charliermarsh.ruff",
-            "editor.codeActionsOnSave": {
-                "source.fixAll.ruff": "explicit",
-                "source.organizeImports.ruff": "explicit"
-            },
-            "editor.formatOnSave": true
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+          },
+          "editor.formatOnSave": true
         },
+        "python.linting.enabled": true,
         "files.insertFinalNewline": true,
         "files.trimTrailingWhitespace": true,
         "terminal.integrated.defaultProfile.linux": "zsh",
